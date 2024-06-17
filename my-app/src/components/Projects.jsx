@@ -17,7 +17,7 @@ const projects =  [
 {
   title: "Quantitative Risk Analysis of Firms in Healthcare Market",
   img: sort,
-  link: "https://github.com/genehern/sort/blob/main/csv_analyser.py",
+  link: "",
   header:"Quantitative Risk Analysis of Firms in Healthcare Market",
   desc: "I was hired to do an admin job which involved in me allocating students to their desired course based on a first-come-first-serve basis, as there were limited slots for each course. I then has to group these students based on their classes and their allocated course.",         
 },
@@ -25,7 +25,7 @@ const projects =  [
 {
     title: "OverEasy - Financial Guidance Website",
     img: sort,
-    link: "https://github.com/genehern/sort/blob/main/csv_analyser.py",
+    link: "",
     header:"OverEasy - Financial Guidance Website",
     desc: "I was hired to do an admin job which involved in me allocating students to their desired course based on a first-come-first-serve basis, as there were limited slots for each course. I then has to group these students based on their classes and their allocated course.",         
   },
@@ -33,7 +33,7 @@ const projects =  [
   {
     title: "ConnectHUB - Community Group Platform",
     img: newConnectHub,
-    link: "https://github.com/genehern/sort/blob/main/csv_analyser.py",
+    link: "",
     header:"ConnectHUB - Community Group Platform",
     desc: "",         
   },
