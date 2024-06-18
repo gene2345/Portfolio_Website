@@ -5,7 +5,7 @@ import pdf from '../images/HICSS_Paper.pdf';
 
 const Home = () => {
   return (
-    <div className='w-full min-h-screen flex flex-col justify-center items-center'>
+    <div className='w-full min-h-screen flex flex-col justify-center items-center py-16 flex flex-col'>
       <img src={profile} className='rounded-full w-48 sm:w-64 mx-auto my-8' alt='Profile' />
 
       <div className='max-w-4xl text-center px-4 sm:px-6 lg:px-8'>

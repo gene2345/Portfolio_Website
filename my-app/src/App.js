@@ -33,10 +33,10 @@ function App() {
             </div>
             <div className="hidden sm:flex sm:space-x-8">
               <button
-                onClick={() => scrollToSection("home")}
+                onClick={() => scrollToSection("about")}
                 className="lg:text-2xl text-gray-900 hover:text-pink-600 transition duration-300"
               >
-                Home
+                About Me
               </button>
               <button
                 onClick={() => scrollToSection("timeline")}
@@ -68,8 +68,12 @@ function App() {
       </nav>
 
       <div className="pt-16"> {/* Adjust padding-top to account for fixed navbar */}
-        <div id="home">
+        <div id="home" className="py-16">
           <Home />
+        </div>
+
+        <div id="about">
+          <About />
         </div>
 
         <div id="timeline">
@@ -80,11 +84,11 @@ function App() {
           <Projects />
         </div>
 
-        <div id="skills">
+        <div id="skills" className="py-16">
           <Skills />
         </div>
 
-        <div id="contact">
+        <div id="contact"className="py-16">
           <Contact />
         </div>
       </div>
