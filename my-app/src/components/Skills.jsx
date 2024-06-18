@@ -1,27 +1,53 @@
 import React from 'react';
 
-import HTML from '../assets/html.png';
-import CSS from '../assets/css.png';
-import JavaScript from '../assets/javascript.png';
-import ReactImg from '../assets/react.png';
-import GitHub from '../images/github.png';
-import Tailwind from '../assets/tailwind.png';
-import Firebase from '../assets/firebase.png';
-
-
 const Skills = () => {
   return (
-          <div className='max-w-[300px] w-full mx-auto grid grid-cols-7 gap-8 text-center py-8'>
-              
-                  <img className='w-24 mx-auto my-auto ' src={HTML} alt="HTML icon" />
-                  <img className='w-24 mx-auto' src={CSS} alt="HTML icon" />   
-                  <img className='w-24 mx-auto' src={JavaScript} alt="HTML icon" />
-                  <img className='w-24 mx-auto' src={ReactImg} alt="HTML icon" />
-                  <img className='w-24 mx-auto rounded-full' src={GitHub} alt="HTML icon" />
-                  <img className='w-24 mx-auto' src={Tailwind} alt="HTML icon" />
-                  <img className='w-24 mx-auto' src={Firebase} alt="HTML icon" />
-              
+    <div name='about' className='w-screen -mt-16 h-screen py-0'>
+      <div className='flex flex-col justify-center items-center w-full h-full'>
+        <div className='max-w-[1000px] w-full grid grid-cols-2 gap-8'>
+          <div className='sm:text-right pb-8 pl-4'>
+            <p className='text-4xl font-bold inline border-b-4 border-pink-600'>
+              Skills
+            </p>
           </div>
+        </div>
+
+        <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4'>
+          <div className='sm:text-right text-4xl font-bold'>
+            <p>Over the years, I have gained an understanding of the following skillsets</p>
+          </div>
+          <div>
+            <div className='text-lg sm:text-xl lg:text-2xl'>
+              <p><b>Machine Learning:</b></p>
+              <ul className='list-disc list-inside'>
+                <li>Strong understanding of machine learning algorithms and models</li>
+                <li>Experience in data preprocessing, feature engineering</li>
+                <li>Hands-on experience with libraries like TensorFlow, PyTorch</li>
+                <li>Deployment of ML models using Flask</li>
+                <li>Natural Language Processing (NLP) techniques</li>
+                <li>Python, R, Tableau</li>
+              </ul>
+              <p className='mt-4'><b>Web Development:</b></p>
+              <ul className='list-disc list-inside'>
+                <li>Proficient in HTML, CSS, JavaScript, SQL, Java</li>
+                <li>Experience with React.js, Vue.js for frontend development</li>
+                <li>Backend development with Node.js, Express.js</li>
+                <li>Database management using MongoDB, Firebase</li>
+                <li>Responsive design and cross-browser compatibility</li>
+              </ul>
+              <p className='mt-4'><b>Additional Skills:</b></p>
+              <ul className='list-disc list-inside'>
+                <li>Excel DAX, VBA Macro, PowerBI</li>
+                <li>Version control with Git, GitHub</li>
+                <li>Experience with Agile methodologies</li>
+                <li>Problem-solving and analytical skills</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   );
 };
 

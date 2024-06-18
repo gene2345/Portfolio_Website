@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactTyped } from 'react-typed';
-import profile from '../images/profile.jpg';
+import profile from '../images/profilepic.png';
 import pdf from '../images/HICSS_Paper.pdf';
 
 const Home = () => {

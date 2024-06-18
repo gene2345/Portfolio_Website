@@ -29,7 +29,6 @@ const About = () => {
           </div>
         </div>
 
-        <Skills />
       </div>
     </div>
   );
