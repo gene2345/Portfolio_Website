@@ -80,7 +80,7 @@ function App() {
           <Timeline />
         </div>
 
-        <div id="projects">
+        <div id="projects" className="py-16">
           <Projects />
         </div>
 
