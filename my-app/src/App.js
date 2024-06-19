@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import Timeline from "./components/Timeline";
 import Skills from "./components/Skills";
 import Navbar from "./components/Navbar";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const scrollToSection = (id) => {
@@ -22,7 +23,8 @@ function App() {
 
   return (
     <div className="overflow-hidden">
-      <Navbar/>
+      <Analytics />
+      <Navbar />
       <nav className="w-full bg-white shadow-md z-10 fixed top-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-32 items-center">
