@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactTyped } from 'react-typed';
 import profile from '../images/profilepic.png';
-import pdf from '../images/Resume2024JuneLatest.pdf';
+import pdf from '../images/GeneEeResume.pdf';
 
 const Home = () => {
   return (
