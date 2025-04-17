@@ -2,19 +2,35 @@ import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import income_insurance from '../images/income_insurance.png';
+import govtech from '../images/govtech.jpg';
 import tridentity from '../images/tridentity.jpg';
 import nus from '../images/nus.jpg';
 import moe from '../images/moe.png';
 const experiences = [
   {
-    title: "Cybersecurity Analyst Intern, Income Insurance",
-    img: income_insurance,
-    date: "May 2024 - Present",
+    title: "Data Scientist Intern",
+    img: govtech,
+    date: "Jan 2025 - Present",
     desc: (
       <>
-         Currently, I am actively engaged with the SOC team in combating cybersecurity threats in real-time. <br/> <br/> My contributions include spearheading the development of a   <span className="highlight-text"> structured data pipeline </span> 
-         that consolidates extensive cybersecurity logs into concise, 
-      user-friendly dashboards for comprehensive insights. Presently, I am collaborating with the DLP team to leverage  <span className="highlight-text"> Statistical and Machine Learning methodologies to enhance the DLP detection system </span>. This effort aims to minimize False Positives and improve 
+         Presently, I am at GovTech Singapore, where I apply <span className="highlight-text"> machine learning methodologies </span> and <span className="highlight-text"> data engineering </span> skills to analyze data from the Student Learning Space (SLS). 
+         <br/> <br/>
+         Currently, I have experience utilizing AWS tools such as <span className="highlight-text"> SageMaker </span> and <span className="highlight-text"> Redshift </span> to develop and deploy machine learning solutions that operate on large-scale datasets.
+         It is an enriching experience, and I am excited to continue growing as I tackle meaningful, real-world challenges at the intersection of technology and education.
+
+      <br/> <br/> 
+      Skills: Sagemaker, Redshift, python, SQL
+      </>
+      ),
+  },
+  {
+    title: "Cybersecurity Analyst Intern, Income Insurance",
+    img: income_insurance,
+    date: "May 2024 - Aug 2024",
+    desc: (
+      <>
+         At Income insurance, I was actively engaged with the SOC team in combating cybersecurity threats in real-time. <br/> <br/> My contributions include spearheading the development of a   <span className="highlight-text"> structured data pipeline </span> 
+         that consolidates extensive cybersecurity logs. I also collaborated with the DLP team to leverage  <span className="highlight-text"> Statistical and Machine Learning methodologies to enhance the DLP detection system </span>. This effort aims to minimize False Positives and improve 
       the accuracy of alert detection.
 
       <br/> <br/> 

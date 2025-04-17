@@ -21,10 +21,9 @@ const Skills = () => {
               <p><b>Machine Learning:</b></p>
               <ul className='list-disc list-inside'>
                 <li>Strong understanding of machine learning algorithms and models</li>
-                <li>Experience in data preprocessing, feature engineering</li>
                 <li>Hands-on experience with libraries like TensorFlow, PyTorch</li>
-                <li>Deployment of ML models using Flask</li>
-                <li>Natural Language Processing (NLP) techniques</li>
+                <li>Big Data Management with Redshift, Spark</li>
+                <li>Deployment of ML models using AWS, GCP</li>
                 <li>Python, R, Tableau</li>
               </ul>
               <p className='mt-4'><b>Web Development:</b></p>

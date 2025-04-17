@@ -20,11 +20,10 @@ const About = () => {
           <div>
             <p className='text-lg sm:text-xl lg:text-2xl'>
               I am a <b> penultimate Business Analytics </b> student at the National University of Singapore, honored to receive the NUS Merit Scholarship. 
-              My academic interests lie in exploring new technologies and statistical methods, particularly in finance, cybersecurity, and natural language processing. 
-              To complement my studies, I am pursuing dual specializations in <b> Finance </b> and <b> Machine Learning </b>. Additionally, my coursework includes comprehensive training in <b> Database Management </b> and <b> Software Development </b>.
+              My academic interests lie in exploring new technologies and statistical methods for data science. 
+              To complement my studies, I am pursuing dual specializations in <b> Finance </b> and <b> Machine Learning </b>. 
               <br /><br />
-              Outside of academics, I stay active by playing basketball regularly and occasionally indulge in recreational scuba diving around the islands of Singapore. 
-              I have a deep appreciation for nature, which is why I am eagerly looking forward for my upcoming fall semester exchange to Ottawa, renowned for its breathtaking landscapes.
+              Outside of academics, I stay active by playing basketball regularly and occasionally indulge in recreational scuba diving around the islands of Singapore.
             </p>
           </div>
         </div>
