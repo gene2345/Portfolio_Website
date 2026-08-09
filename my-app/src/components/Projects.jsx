@@ -22,7 +22,7 @@ const projects = [
   {
     title: 'Quantitative Risk Analysis of Firms in Healthcare Market',
     img: Pharma,
-    link: HealthcarePdf, 
+    link: HealthcarePdf,
     githubLink: 'https://github.com/gene2345/finModelling/blob/main/QualitativeAnalysis.ipynb',
     header: 'Quantitative Risk Analysis of Firms in Healthcare Market',
     desc:
@@ -32,7 +32,7 @@ const projects = [
     title: 'OverEasy - Financial Guidance Website',
     img: OverEasy,
     link: '',
-    githubLink: 'https://github.com/gene2345/OverEasyUpdatedv3', 
+    githubLink: 'https://github.com/gene2345/OverEasyUpdatedv3',
     header: 'OverEasy - Financial Guidance Website',
     desc:
       'This website features a Sentiment Analysis Scanner designed to analyze the latest comments about a ticker from popular channels like Yahoo Finance. The comments are processed and fed into a NLP model trained on financial news data. This allows users to gauge the overall sentiment of the market towards a particular ticker. \n The second part of the website enables users to conduct a Comparable Companies Analysis for a chosen ticker. Leveraging YFinance API, the website identifies similar companies based on market capitalization and sector. It then compares up to 15 financial ratios (such as PE, ROE, ROA) among the top 5 companies in this group. This comparative analysis offers new investors a preliminary understanding of the financial health and performance metrics of the respective sector.',
@@ -49,7 +49,7 @@ const projects = [
   {
     title: 'ConnectHUB - Community Group Platform',
     img: newConnectHub,
-    link: 'https://connecthub-88e58.web.app/', 
+    link: 'https://connecthub-88e58.web.app/',
     githubLink: 'https://github.com/gene2345/connectHub',
     header: 'ConnectHUB - Community Group Platform',
     desc: ' This website, built with Vue.js, Firebase, and Node.js, aims to unite communities by offering two primary features. First, it includes an e-commerce platform where users can buy and sell items within their community. Second, it features group functionality that enables users to engage through live forums or coordinate physical events. Additionally, administrators have tools to moderate these groups effectively.',
@@ -58,20 +58,24 @@ const projects = [
 
 const Card = ({ project }) => {
   return (
-    <div className='relative shadow-xl max-w-5xl mx-auto flex flex-col p-4 md:my-0 items-center mt-8 rounded-lg lg:hover:scale-105 duration-300 lg:grid grid-cols-2 lg:gap-8 lg:py-24'>
-      <img className='object-scale-down py-8' src={project.img} alt='Project' />
+    <div className='w-full max-w-5xl mx-auto rounded-[24px] border border-slate-200 bg-white shadow-[0_16px_40px_rgba(15,23,42,0.05)] p-5 md:p-8 my-8 lg:grid lg:grid-cols-[1.05fr_1.4fr] lg:gap-8 lg:items-center'>
+      <div className='flex items-center justify-center py-4 lg:py-0'>
+        <img className='object-contain max-h-[260px] w-full max-w-[360px]' src={project.img} alt='Project' />
+      </div>
+
       <div className='w-full'>
-        <h1 className='text-2xl font-bold py-4'>{project.header}</h1>
-        <div>
+        <h1 className='text-2xl font-bold py-4 text-slate-800'>{project.header}</h1>
+        <div className='text-base leading-relaxed text-slate-700'>
           {project.desc.split('\n').map((line, index) => (
-            <p key={index}>{line}</p>
+            <p key={index} className='mb-2'>{line}</p>
           ))}
         </div>
-        <div className='flex justify-center mt-4'>
+
+        <div className='flex flex-wrap justify-center lg:justify-start gap-3 mt-6'>
           {project.link && (
             <a
               href={project.link}
-              className='bg-white border border-rose-800 text-rose-800 hover:bg-rose-800 hover:text-white font-raleway py-3 px-6 rounded-lg text-lg font-semibold mr-4 transition-colors duration-300'
+              className='bg-white border border-rose-700 text-rose-700 hover:bg-rose-700 hover:text-white font-raleway py-3 px-6 rounded-lg text-base font-semibold transition-colors duration-300'
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -81,7 +85,7 @@ const Card = ({ project }) => {
           {project.githubLink && (
             <a
               href={project.githubLink}
-              className='bg-white border border-rose-800 text-rose-800 hover:bg-rose-800 hover:text-white font-raleway py-3 px-6 rounded-lg text-lg font-semibold transition-colors duration-300'
+              className='bg-white border border-slate-300 text-slate-700 hover:bg-slate-800 hover:text-white font-raleway py-3 px-6 rounded-lg text-base font-semibold transition-colors duration-300'
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -96,11 +100,14 @@ const Card = ({ project }) => {
 
 const Cards = () => {
   return (
-    <div className='w-full py-8 px-4 bg-white flex flex-col items-center pt-24'>
-      <p className='text-4xl font-bold inline border-b-4 border-pink-600'>
-        My Projects
-      </p>
-      <div className='max-w-[1240px] mx-auto grid gap-8 mb-4'>
+    <div className='w-full px-4 py-20'>
+      <div className='text-center mb-10'>
+        <p className='inline-block text-4xl font-bold text-slate-800 border-b-4 border-pink-600 pb-2'>
+          My Projects
+        </p>
+      </div>
+
+      <div className='max-w-[1240px] mx-auto'>
         {projects.map((project, index) => (
           <Card key={index} project={project} />
         ))}

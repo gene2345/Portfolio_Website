@@ -7,93 +7,84 @@ import Timeline from "./components/Timeline";
 import Skills from "./components/Skills";
 import Navbar from "./components/Navbar";
 import { Analytics } from "@vercel/analytics/react";
+import "./App.css";
 
 function App() {
+  const navItems = [
+    { label: "About", id: "about" },
+    { label: "Experience", id: "timeline" },
+    { label: "Projects", id: "projects" },
+    { label: "Skills", id: "skills" },
+    { label: "Contact", id: "contact" },
+  ];
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      const navbarHeight = document.querySelector('nav').offsetHeight;
-      const elementPosition = element.offsetTop - navbarHeight;
+      const navbarHeight = document.querySelector("header")?.offsetHeight || 0;
+      const elementPosition = element.offsetTop - navbarHeight - 12;
       window.scrollTo({
         top: elementPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
 
   return (
-    <div className="overflow-hidden">
+    <div className="site-shell">
       <Analytics />
       <Navbar />
-      <nav className="w-full bg-white shadow-md z-10 fixed top-0">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-32 items-center">
-            <div className="flex">
-              <div className="flex-shrink-0 flex items-center">
-                <p className="text-4xl lg:text-4xl font-medium font-bold text-gray-900">My Portfolio</p>
-              </div>
-            </div>
-            <div className="hidden sm:flex sm:space-x-8">
-              <button
-                onClick={() => scrollToSection("about")}
-                className="lg:text-2xl text-gray-900 hover:text-pink-600 transition duration-300"
-              >
-                About Me
-              </button>
-              <button
-                onClick={() => scrollToSection("timeline")}
-                className="lg:text-2xl text-gray-900 hover:text-pink-600 transition duration-300"
-              >
-                Experiences
-              </button>
-              <button
-                onClick={() => scrollToSection("projects")}
-                className="lg:text-2xl text-gray-900 hover:text-pink-600 transition duration-300"
-              >
-                Projects
-              </button>
-              <button
-                onClick={() => scrollToSection("skills")}
-                className="lg:text-2xl text-gray-900 hover:text-pink-600 transition duration-300"
-              >
-                Skills
-              </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="lg:text-2xl text-gray-900 hover:text-pink-600 transition duration-300"
-              >
-                Contact
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
 
-      <div className="pt-16"> {/* Adjust padding-top to account for fixed navbar */}
-        <div id="home" className="py-16">
+      <header className="site-header">
+        <div className="site-header-inner">
+          <button
+            className="brand-mark"
+            onClick={() => scrollToSection("home")}
+            type="button"
+          >
+            GENE EE
+          </button>
+
+          <nav className="top-nav" aria-label="Main navigation">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => scrollToSection(item.id)}
+                className="nav-link"
+              >
+                {item.label}
+              </button>
+            ))}
+          </nav>
+        </div>
+      </header>
+
+      <main className="page-content">
+        <section id="home" className="section-block hero-section">
           <Home />
-        </div>
+        </section>
 
-        <div id="about">
+        <section id="about" className="section-block">
           <About />
-        </div>
+        </section>
 
-        <div id="timeline">
+        <section id="timeline" className="section-block">
           <Timeline />
-        </div>
+        </section>
 
-        <div id="projects" className="py-16">
+        <section id="projects" className="section-block">
           <Projects />
-        </div>
+        </section>
 
-        <div id="skills" className="py-16">
+        <section id="skills" className="section-block">
           <Skills />
-        </div>
+        </section>
 
-        <div id="contact"className="py-16">
+        <section id="contact" className="section-block">
           <Contact />
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
   );
 }

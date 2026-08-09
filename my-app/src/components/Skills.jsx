@@ -1,50 +1,63 @@
 import React from 'react';
 
+const skillGroups = [
+  {
+    title: 'Languages',
+    accent: 'from-indigo-500 to-violet-500',
+    items: ['Python', 'SQL', 'Java', 'R', 'JavaScript', 'HTML/CSS'],
+  },
+  {
+    title: 'ML & Data',
+    accent: 'from-pink-500 to-rose-500',
+    items: ['TensorFlow', 'PyTorch', 'CUDA', 'Scikit-learn', 'Spark', 'Hadoop', 'Airflow', 'dbt', 'Langchain', 'Langfuse', 'Ollama'],
+  },
+  {
+    title: 'Cloud & DevOps',
+    accent: 'from-sky-500 to-cyan-500',
+    items: ['AWS', 'Azure', 'Docker', 'Kubernetes'],
+  },
+  {
+    title: 'Analytics & BI',
+    accent: 'from-emerald-500 to-teal-500',
+    items: ['Tableau', 'Power BI', 'Excel DAX', 'VBA', 'A/B testing', 'Data storytelling'],
+  },
+];
+
 const Skills = () => {
   return (
-    <div name='about' className='w-screen -mt-16 h-screen py-0'>
-      <div className='flex flex-col justify-center items-center w-full h-full'>
-        <div className='max-w-[1000px] w-full grid grid-cols-2 gap-8'>
-          <div className='sm:text-right pb-8 pl-4'>
-            <p className='text-4xl font-bold inline border-b-4 border-pink-600'>
-              Skills
-            </p>
-          </div>
+    <div name='skills' className='w-full py-20 px-4'>
+      <div className='max-w-6xl mx-auto'>
+        <div className='text-center mb-12'>
+          <p className='inline-block text-4xl font-bold text-slate-800 border-b-4 border-pink-600 pb-2'>
+            Skills
+          </p>
         </div>
 
-        <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4'>
-          <div className='sm:text-right text-4xl font-bold'>
-            <p>Over the years, I have gained an understanding of the following skillsets</p>
-          </div>
-          <div>
-            <div className='text-lg sm:text-xl lg:text-2xl'>
-              <p><b>Machine Learning:</b></p>
-              <ul className='list-disc list-inside'>
-                <li>Strong understanding of machine learning algorithms and models</li>
-                <li>Hands-on experience with libraries like TensorFlow, PyTorch</li>
-                <li>Big Data Management with Redshift, Spark</li>
-                <li>Deployment of ML models using AWS, GCP</li>
-                <li>Python, R, Tableau</li>
-              </ul>
-              <p className='mt-4'><b>Web Development:</b></p>
-              <ul className='list-disc list-inside'>
-                <li>Proficient in HTML, CSS, JavaScript, SQL, Java</li>
-                <li>Experience with React.js, Vue.js for frontend development</li>
-                <li>Backend development with Node.js, Express.js</li>
-                <li>Database management using MongoDB, Firebase</li>
-                <li>Responsive design and cross-browser compatibility</li>
-              </ul>
-              <p className='mt-4'><b>Additional Skills:</b></p>
-              <ul className='list-disc list-inside'>
-                <li>Excel DAX, VBA Macro, PowerBI</li>
-                <li>Version control with Git, GitHub</li>
-                <li>Experience with Agile methodologies</li>
-                <li>Problem-solving and analytical skills</li>
-              </ul>
+        <div className='grid gap-5 md:grid-cols-2 xl:grid-cols-4'>
+          {skillGroups.map((group) => (
+            <div
+              key={group.title}
+              className='rounded-2xl border border-slate-200 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.04)] overflow-hidden'
+            >
+              <div className={`h-1.5 w-full bg-gradient-to-r ${group.accent}`} />
+
+              <div className='p-5'>
+                <h3 className='text-xl font-bold text-slate-800 mb-4'>{group.title}</h3>
+
+                <div className='flex flex-wrap gap-2'>
+                  {group.items.map((item) => (
+                    <span
+                      key={item}
+                      className='rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-medium text-slate-700'
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
-
       </div>
     </div>
   );
