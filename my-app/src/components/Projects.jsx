@@ -1,13 +1,11 @@
 import React from 'react';
-import sort from '../images/sort.png';
-import volunteer from '../images/volunteer.png';
-import github from '../images/github.png';
 import GCN from '../images/GCN.png';
 import OverEasy from '../images/overeasy.png';
 import Pharma from '../images/pharma.png';
 import newConnectHub from '../images/newConnectHub.png';
 import pdf from '../images/HICSS_Paper.pdf';
 import HealthcarePdf from '../images/Analysis_Healthcare_Corporate_Bonds.pdf';
+import volunteer from '../images/volunteer.png';
 
 const projects = [
   {
