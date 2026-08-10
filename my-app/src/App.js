@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
@@ -10,6 +10,8 @@ import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const navItems = [
     { label: "About", id: "about" },
     { label: "Experience", id: "timeline" },
@@ -30,6 +32,11 @@ function App() {
     }
   };
 
+  const handleNavClick = (id) => {
+    setMenuOpen(false);
+    scrollToSection(id);
+  };
+
   return (
     <div className="site-shell">
       <Analytics />
@@ -45,19 +52,43 @@ function App() {
             GENE EE
           </button>
 
-          <nav className="top-nav" aria-label="Main navigation">
+          <nav className="top-nav desktop-nav" aria-label="Main navigation">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 type="button"
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => handleNavClick(item.id)}
                 className="nav-link"
               >
                 {item.label}
               </button>
             ))}
           </nav>
+
+          <button
+            type="button"
+            className="mobile-menu-button"
+            aria-label="Toggle navigation"
+            onClick={() => setMenuOpen((prev) => !prev)}
+          >
+            {menuOpen ? "✕" : "☰"}
+          </button>
         </div>
+
+        {menuOpen && (
+          <div className="mobile-menu">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => handleNavClick(item.id)}
+                className="mobile-nav-link"
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        )}
       </header>
 
       <main className="page-content">
